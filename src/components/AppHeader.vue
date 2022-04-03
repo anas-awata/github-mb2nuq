@@ -1,23 +1,25 @@
 <template>
   <div class="header">
-    <div class="logo">STORE-TEMPLATE</div>
-    <ul>
-      <li>
-        <router-link to="/"><a>Home</a></router-link>
-      </li>
-      |
-      <li>
-        <router-link to="/blog"><a>Blog</a></router-link>
-      </li>
-      |
-      <li>
-        <router-link to="/about"><a>About</a></router-link>
-      </li>
-      |
-      <li>
-        <router-link to="/help"><a> Help</a></router-link>
-      </li>
-    </ul>
+    <div class="container">
+      <div class="logo">STORE-TEMPLATE</div>
+      <ul class="text-right">
+        <li>
+          <router-link to="/"><a>Home</a></router-link>
+        </li>
+        |
+        <li>
+          <router-link to="/blog"><a>Blog</a></router-link>
+        </li>
+        |
+        <li>
+          <router-link to="/about"><a>About</a></router-link>
+        </li>
+        |
+        <li>
+          <router-link to="/help"><a> Help</a></router-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 <script>
