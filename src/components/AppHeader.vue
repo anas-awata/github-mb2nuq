@@ -7,6 +7,10 @@
       </li>
       |
       <li>
+        <router-link to="/blog"><a>Blog</a></router-link>
+      </li>
+      |
+      <li>
         <router-link to="/about"><a>About</a></router-link>
       </li>
       |
@@ -35,6 +39,7 @@ export default {
   ul {
     float: left;
     width: 800px;
+    margin: 0;
     li {
       padding: 20px;
       display: inline-block;
