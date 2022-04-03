@@ -1,20 +1,17 @@
 <template>
   <div class="post">
-    <span class="post-views">342</span>
-    <h3 class="post-title">Post Title</h3>
-    <span class="post-date">17-8-2022</span>
+    <span class="post-views">{{ views }}</span>
+    <h3 class="post-title">{{ title }}</h3>
+    <span class="post-date">{{ date }}</span>
     <p class="post-content">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic dolore
-      perspiciatis, itaque, reiciendis consequuntur sit veritatis accusamus
-      velit, soluta totam officiis minima dolor fuga nulla exercitationem amet
-      odio ea ullam.
+      {{ content }}
     </p>
     <div class="row">
       <div class="col-sm-6">
-        <span class="post-author">author</span>
+        <span class="post-author">{{ author }}</span>
       </div>
       <div class="col-sm-6 text-right">
-        <span class="post-catigory"> catigory </span>
+        <span class="post-catigory"> {{ catigory }} </span>
       </div>
     </div>
   </div>
@@ -22,6 +19,7 @@
 
 <script>
 export default {
+  props: ["views", "title", "date", "content", "author", "catigory"],
   name: "blog-post",
 };
 </script>
