@@ -8,6 +8,10 @@
         </li>
         |
         <li>
+          <router-link to="/cars"><a>Cars</a></router-link>
+        </li>
+        |
+        <li>
           <router-link to="/blog"><a>Blog</a></router-link>
         </li>
         |

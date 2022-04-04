@@ -1,17 +1,13 @@
 <template>
-  <div class="post">
-    <span class="post-views">{{ views }}</span>
-    <h3 class="post-title">{{ title }}</h3>
-    <span class="post-date">{{ date }}</span>
-    <p class="post-content">
-      {{ content }}
-    </p>
+  <div class="car-item">
+    <span class="car-name">{{ carname }}</span>
+    <h3 class="car-date">{{ date }}</h3>
     <div class="row">
       <div class="col-sm-6">
-        <span class="post-author">{{ author }}</span>
+        <span class="car-company">{{ company }}</span>
       </div>
       <div class="col-sm-6 text-right">
-        <span class="post-catigory"> {{ catigory }} </span>
+        <span class="car-price"> {{ price + " $" }} </span>
       </div>
     </div>
   </div>
@@ -19,19 +15,19 @@
 
 <script>
 export default {
-  props: ["views", "title", "date", "content", "author", "catigory"],
-  name: "blog-post",
+  props: ["carname", "date", "company", "price"],
+  name: "car-item",
 };
 </script>
 
 <style lang="scss" scoped>
-.post {
+.car-item {
   padding: 20px;
   background-color: white;
   box-shadow: 0 0 10px #ddd;
   position: relative;
   text-align: left;
-  .post-views {
+  /* .car-views {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -40,23 +36,23 @@ export default {
     padding: 1px 5px;
     text-align: center;
     font-weight: bold;
-  }
-  .post-date {
+  }*/
+  .car-date {
     color: #888;
     display: block;
     padding: 0 0 5px;
     font-size: 14px;
   }
-  .post-content {
+  /*.post-content {
     line-height: 1.8;
     color: #666;
-  }
-  .post-author {
+  }*/
+  .car-company {
     background-color: #6dc3f5;
     padding: 6px 10px;
     border-radius: 4px;
   }
-  .post-catigory {
+  .car-price {
     background-color: #96e2cb;
     padding: 6px 10px;
     border-radius: 4px;

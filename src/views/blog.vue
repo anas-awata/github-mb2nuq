@@ -6,9 +6,11 @@
       <div class="row">
         <div class="col-md-8">
           <div class="posts-area"></div>
+          <!-- <div v-for="(po, index) in postload" :key="index"> -->
           <blog-posts
-            v-for="post in posts"
+            v-for="post in postload"
             :key="post.id"
+            :id="post.id"
             :views="post.views"
             :title="post.title"
             :date="post.date"
@@ -16,6 +18,10 @@
             :author="post.author"
             :catigory="post.catigory"
           />
+          <!-- </div> --->
+          <button @click="length += step" v-if="length < postlength">
+            show more
+          </button>
         </div>
         <div class="col-md-4">
           <div class="sidebar"></div>
@@ -36,9 +42,33 @@ export default {
       pagename: "Blog",
       pagedesc: "my Blog page",
       posts: JsonPosts,
+      length: 3,
+      step: 3,
     };
+  },
+  computed: {
+    postload() {
+      return this.posts.slice(0, this.length);
+    },
+    postlength() {
+      return this.posts.length;
+    },
   },
   name: "my-blog",
   components: { BlogPosts, SideBar },
 };
 </script>
+<style lang="scss" scoped>
+button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  &:hover {
+    background-color: aqua;
+    color: black;
+  }
+}
+</style>
