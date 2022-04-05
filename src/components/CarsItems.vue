@@ -1,6 +1,7 @@
 <template>
   <div class="car-item">
     <span class="car-name">{{ carname }}</span>
+    <span class="car-fav"> favourite </span>
     <h3 class="car-date">{{ date }}</h3>
     <div class="row">
       <div class="col-sm-6">
@@ -15,7 +16,7 @@
 
 <script>
 export default {
-  props: ["carname", "date", "company", "price"],
+  props: ["carname", "date", "company", "price", "fav"],
   name: "car-item",
 };
 </script>
@@ -27,7 +28,7 @@ export default {
   box-shadow: 0 0 10px #ddd;
   position: relative;
   text-align: left;
-  /* .car-views {
+  .car-fav {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -36,17 +37,13 @@ export default {
     padding: 1px 5px;
     text-align: center;
     font-weight: bold;
-  }*/
+  }
   .car-date {
     color: #888;
     display: block;
     padding: 0 0 5px;
     font-size: 14px;
   }
-  /*.post-content {
-    line-height: 1.8;
-    color: #666;
-  }*/
   .car-company {
     background-color: #6dc3f5;
     padding: 6px 10px;
@@ -57,5 +54,9 @@ export default {
     padding: 6px 10px;
     border-radius: 4px;
   }
+}
+.isfav .car-fav {
+  background-color: red;
+  color: white;
 }
 </style>

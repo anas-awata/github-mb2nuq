@@ -1,30 +1,242 @@
-[{"id":1,"title":"Dakota","date":1996,"company":"Dodge","price":513187},
-{"id":2,"title":"CLK-Class","date":2005,"company":"Mercedes-Benz","price":221915},
-{"id":3,"title":"Ranger","date":2007,"company":"Ford","price":560121},
-{"id":4,"title":"CX-9","date":2008,"company":"Mazda","price":644470},
-{"id":5,"title":"Countach","date":1986,"company":"Lamborghini","price":893256},
-{"id":6,"title":"2500","date":1997,"company":"GMC","price":208625},
-{"id":7,"title":"Accord","date":2004,"company":"Honda","price":869884},
-{"id":8,"title":"Thunderbird","date":1977,"company":"Ford","price":841907},
-{"id":9,"title":"2500","date":1994,"company":"Chevrolet","price":924274},
-{"id":10,"title":"8 Series","date":1992,"company":"BMW","price":255002},
-{"id":11,"title":"626","date":1995,"company":"Mazda","price":299803},
-{"id":12,"title":"E-Class","date":2001,"company":"Mercedes-Benz","price":260263},
-{"id":13,"title":"Caravan","date":2002,"company":"Dodge","price":108577},
-{"id":14,"title":"Riviera","date":1995,"company":"Buick","price":588866},
-{"id":15,"title":"S5","date":2012,"company":"Audi","price":588272},
-{"id":16,"title":"Bonneville","date":2001,"company":"Pontiac","price":940566},
-{"id":17,"title":"Jetta","date":2003,"company":"Volkswagen","price":653775},
-{"id":18,"title":"SX4","date":2007,"company":"Suzuki","price":481353},
-{"id":19,"title":"Grand Prix","date":1962,"company":"Pontiac","price":704083},
-{"id":20,"title":"Econoline E250","date":1999,"company":"Ford","price":630729},
-{"id":21,"title":"S80","date":2008,"company":"Volvo","price":997147},
-{"id":22,"title":"Eurovan","date":1994,"company":"Volkswagen","price":289379},
-{"id":23,"title":"Caprice Classic","date":1994,"company":"Chevrolet","price":123866},
-{"id":24,"title":"M-Class","date":2009,"company":"Mercedes-Benz","price":345547},
-{"id":25,"title":"MPV","date":2005,"company":"Mazda","price":331858},
-{"id":26,"title":"Ram Wagon B350","date":1993,"company":"Dodge","price":550244},
-{"id":27,"title":"Courier","date":1987,"company":"Ford","price":492667},
-{"id":28,"title":"Sienna","date":2005,"company":"Toyota","price":990498},
-{"id":29,"title":"MPV","date":2002,"company":"Mazda","price":248186},
-{"id":30,"title":"Trooper","date":1993,"company":"Isuzu","price":709250}]
+[
+  {
+    "id": 1,
+    "title": "Dakota",
+    "date": 1996,
+    "company": "Dodge",
+    "price": 513187,
+    "fav": true
+  },
+  {
+    "id": 2,
+    "title": "CLK-Class",
+    "date": 2005,
+    "company": "Mercedes-Benz",
+    "price": 221915,
+    "fav": false
+  },
+  {
+    "id": 3,
+    "title": "Ranger",
+    "date": 2007,
+    "company": "Ford",
+    "price": 560121,
+    "fav": false
+  },
+  {
+    "id": 4,
+    "title": "CX-9",
+    "date": 2008,
+    "company": "Mazda",
+    "price": 644470,
+    "fav": false
+  },
+  {
+    "id": 5,
+    "title": "Countach",
+    "date": 1986,
+    "company": "Lamborghini",
+    "price": 893256,
+    "fav": false
+  },
+  {
+    "id": 6,
+    "title": "2500",
+    "date": 1997,
+    "company": "GMC",
+    "price": 208625,
+    "fav": false
+  },
+  {
+    "id": 7,
+    "title": "Accord",
+    "date": 2004,
+    "company": "Honda",
+    "price": 869884,
+    "fav": false
+  },
+  {
+    "id": 8,
+    "title": "Thunderbird",
+    "date": 1977,
+    "company": "Ford",
+    "price": 841907,
+    "fav": false
+  },
+  {
+    "id": 9,
+    "title": "2500",
+    "date": 1994,
+    "company": "Chevrolet",
+    "price": 924274,
+    "fav": false
+  },
+  {
+    "id": 10,
+    "title": "8 Series",
+    "date": 1992,
+    "company": "BMW",
+    "price": 255002,
+    "fav": false
+  },
+  {
+    "id": 11,
+    "title": "626",
+    "date": 1995,
+    "company": "Mazda",
+    "price": 299803,
+    "fav": false
+  },
+  {
+    "id": 12,
+    "title": "E-Class",
+    "date": 2001,
+    "company": "Mercedes-Benz",
+    "price": 260263,
+    "fav": false
+  },
+  {
+    "id": 13,
+    "title": "Caravan",
+    "date": 2002,
+    "company": "Dodge",
+    "price": 108577,
+    "fav": false
+  },
+  {
+    "id": 14,
+    "title": "Riviera",
+    "date": 1995,
+    "company": "Buick",
+    "price": 588866,
+    "fav": false
+  },
+  {
+    "id": 15,
+    "title": "S5",
+    "date": 2012,
+    "company": "Audi",
+    "price": 588272,
+    "fav": false
+  },
+  {
+    "id": 16,
+    "title": "Bonneville",
+    "date": 2001,
+    "company": "Pontiac",
+    "price": 940566,
+    "fav": false
+  },
+  {
+    "id": 17,
+    "title": "Jetta",
+    "date": 2003,
+    "company": "Volkswagen",
+    "price": 653775,
+    "fav": false
+  },
+  {
+    "id": 18,
+    "title": "SX4",
+    "date": 2007,
+    "company": "Suzuki",
+    "price": 481353,
+    "fav": false
+  },
+  {
+    "id": 19,
+    "title": "Grand Prix",
+    "date": 1962,
+    "company": "Pontiac",
+    "price": 704083,
+    "fav": false
+  },
+  {
+    "id": 20,
+    "title": "Econoline E250",
+    "date": 1999,
+    "company": "Ford",
+    "price": 630729,
+    "fav": false
+  },
+  {
+    "id": 21,
+    "title": "S80",
+    "date": 2008,
+    "company": "Volvo",
+    "price": 997147,
+    "fav": false
+  },
+  {
+    "id": 22,
+    "title": "Eurovan",
+    "date": 1994,
+    "company": "Volkswagen",
+    "price": 289379,
+    "fav": false
+  },
+  {
+    "id": 23,
+    "title": "Caprice Classic",
+    "date": 1994,
+    "company": "Chevrolet",
+    "price": 123866,
+    "fav": false
+  },
+  {
+    "id": 24,
+    "title": "M-Class",
+    "date": 2009,
+    "company": "Mercedes-Benz",
+    "price": 345547,
+    "fav": false
+  },
+  {
+    "id": 25,
+    "title": "MPV",
+    "date": 2005,
+    "company": "Mazda",
+    "price": 331858,
+    "fav": false
+  },
+  {
+    "id": 26,
+    "title": "Ram Wagon B350",
+    "date": 1993,
+    "company": "Dodge",
+    "price": 550244,
+    "fav": false
+  },
+  {
+    "id": 27,
+    "title": "Courier",
+    "date": 1987,
+    "company": "Ford",
+    "price": 492667,
+    "fav": false
+  },
+  {
+    "id": 28,
+    "title": "Sienna",
+    "date": 2005,
+    "company": "Toyota",
+    "price": 990498,
+    "fav": false
+  },
+  {
+    "id": 29,
+    "title": "MPV",
+    "date": 2002,
+    "company": "Mazda",
+    "price": 248186,
+    "fav": false
+  },
+  {
+    "id": 30,
+    "title": "Trooper",
+    "date": 1993,
+    "company": "Isuzu",
+    "price": 709250,
+    "fav": false
+  }
+]

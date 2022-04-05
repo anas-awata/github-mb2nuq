@@ -9,11 +9,14 @@
           <MyCars
             v-for="car in carsload"
             :key="car.id"
+            :class="{ isfav: car.fav }"
             :id="car.id"
+            :fav="car.fav"
             :carname="car.title"
             :date="car.date"
             :company="car.company"
             :price="car.price"
+            @click="car.fav = !car.fav"
           />
           <button @click="length += step" v-if="length < carslength">
             show more
