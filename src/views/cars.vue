@@ -9,14 +9,8 @@
           <MyCars
             v-for="car in carsload"
             :key="car.id"
-            :class="{ isfav: car.fav }"
-            :id="car.id"
-            :fav="car.fav"
-            :carname="car.title"
-            :date="car.date"
-            :company="car.company"
-            :price="car.price"
-            @click="car.fav = !car.fav"
+            :car="car"
+            @changefav="togglefav(car)"
           />
           <button @click="length += step" v-if="length < carslength">
             show more
@@ -34,7 +28,6 @@
 import SideBar from "@/components/SideBar.vue";
 import cardata from "../json/car-items.json";
 import MyCars from "@/components/CarsItems.vue";
-
 export default {
   data: function () {
     return {
@@ -51,6 +44,14 @@ export default {
     },
     carslength() {
       return this.cars.length;
+    },
+    favCars() {
+      return this.cars.filter((car) => car.fav);
+    },
+  },
+  methods: {
+    togglefav(car) {
+      car.fav = !car.fav;
     },
   },
   name: "my-blog",

@@ -1,14 +1,14 @@
 <template>
-  <div class="car-item">
-    <span class="car-name">{{ carname }}</span>
-    <span class="car-fav"> favourite </span>
-    <h3 class="car-date">{{ date }}</h3>
+  <div class="car-item" :class="{ isfav: car.fav }">
+    <span class="car-name">{{ car.title }}</span>
+    <button class="car-fav" @click="$emit('changefav')">Love</button>
+    <h3 class="car-date">{{ car.date }}</h3>
     <div class="row">
       <div class="col-sm-6">
-        <span class="car-company">{{ company }}</span>
+        <span class="car-company">{{ car.company }}</span>
       </div>
       <div class="col-sm-6 text-right">
-        <span class="car-price"> {{ price + " $" }} </span>
+        <span class="car-price"> {{ car.price + " $" }} </span>
       </div>
     </div>
   </div>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  props: ["carname", "date", "company", "price", "fav"],
+  props: ["car"],
   name: "car-item",
 };
 </script>
@@ -32,11 +32,10 @@ export default {
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: #9086;
+    background-color: #fff;
     border-radius: 4px;
     padding: 1px 5px;
     text-align: center;
-    font-weight: bold;
   }
   .car-date {
     color: #888;
