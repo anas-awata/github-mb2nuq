@@ -15,19 +15,13 @@
       </div>
     </div>
   </div>
-  <div v-if="showmodal">
-    <mymodal @closemodal="$emit('closemodal')">
-      <h1>{{ product.title }}</h1>
-    </mymodal>
-  </div>
 </template>
 
 <script>
-import mymodal from "@/components/Modal.vue";
 export default {
-  props: ["product", "showmodal"],
+  props: ["product"],
   name: "my-product",
-  components: { mymodal },
+  components: {},
 };
 </script>
 

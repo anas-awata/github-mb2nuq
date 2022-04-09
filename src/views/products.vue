@@ -10,10 +10,11 @@
             v-for="product in productsload"
             :key="product.id"
             :product="product"
-            :showmodal="showmodal"
             @changefav="togglefav(product)"
-            @addcart="togglemodal()"
-            @closemodal="togglemodal()"
+            @addcart="
+              togglemodal();
+              productsid(product.id);
+            "
           />
           <button @click="length += step" v-if="length < productslength">
             show more
@@ -26,11 +27,20 @@
       </div>
     </div>
   </div>
+  <div v-if="showmodal">
+    <mymodal
+      @closemodal="togglemodal()"
+      v-for="product in productsmodal"
+      :key="product.id"
+      :product="product"
+    ></mymodal>
+  </div>
 </template>
 <script>
 import SideBar from "@/components/SideBar.vue";
 import productsdata from "../json/car-items.json";
 import myproduct from "@/components/product.vue";
+import mymodal from "@/components/Modal.vue";
 export default {
   data: function () {
     return {
@@ -40,6 +50,7 @@ export default {
       length: 3,
       step: 3,
       showmodal: false,
+      productid: 0,
     };
   },
   computed: {
@@ -52,6 +63,9 @@ export default {
     favproducts() {
       return this.products.filter((product) => product.fav);
     },
+    productsmodal() {
+      return this.products.slice(this.productid - 1, this.productid);
+    },
   },
   methods: {
     togglefav(product) {
@@ -60,9 +74,12 @@ export default {
     togglemodal() {
       this.showmodal = !this.showmodal;
     },
+    productsid(id) {
+      this.productid = id;
+    },
   },
   name: "my-blog",
-  components: { myproduct, SideBar },
+  components: { myproduct, SideBar, mymodal },
 };
 </script>
 <style lang="scss" scoped>
